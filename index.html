@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Princess Playlist 💖</title>
+<title>For You 💖</title>
 
 <style>
 body {
@@ -11,9 +11,10 @@ body {
   background: linear-gradient(to bottom, #0a0a0a, #1a001a);
   color: white;
   text-align: center;
+  overflow-x: hidden;
 }
 
-/* Opening screen */
+/* START SCREEN */
 #intro {
   position: fixed;
   top: 0; left: 0;
@@ -26,50 +27,76 @@ body {
   z-index: 9999;
 }
 
-/* Headings */
+/* BUTTON */
+button {
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: pink;
+  cursor: pointer;
+}
+
+/* HEADINGS */
 h1, h2 {
   color: pink;
 }
 
-/* Playlist box */
-.playlist {
-  margin-top: 50px;
-  padding: 20px;
+/* CONTENT */
+.container {
+  padding: 30px;
+}
+
+/* LINK BUTTON */
+a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: hotpink;
+  color: black;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
 }
 </style>
 </head>
 
 <body>
 
-<!-- 💖 OPENING SCREEN -->
+<!-- 💖 START SCREEN -->
 <div id="intro">
   <h1>💖 Welcome Princess 💖</h1>
-  <p>This playlist is made just for you</p>
+  <p>A small gift made with love</p>
 
-  <button onclick="document.getElementById('intro').style.display='none'"
-    style="
-    padding:10px 20px;
-    font-size:18px;
-    border:none;
-    border-radius:10px;
-    background:pink;
-    cursor:pointer;">
+  <button onclick="document.getElementById('intro').style.display='none'">
     Enter 💕
   </button>
 </div>
 
-<!-- 💌 TITLE -->
-<h1>🎵 Princess Playlist 🎵</h1>
+<!-- 🎵 BACKGROUND MUSIC (Ed Sheeran - Perfect) -->
+<audio autoplay loop>
+  <source src="https://dn720307.ca.archive.org/0/items/edsheeranperfect/Ed%20Sheeran%20-%20Perfect.mp3" type="audio/mpeg">
+</audio>
 
-<!-- 🎵 APPLE MUSIC PLAYLIST -->
-<div class="playlist">
-  <iframe allow="autoplay *; encrypted-media *;"
-    frameborder="0"
-    height="450"
-    style="width:90%;max-width:700px;"
-    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-    src="https://music.apple.com/in/playlist/princess-playlist/pl.u-9N9L2a4t1kEMkgX">
-  </iframe>
+<!-- 💌 MAIN CONTENT -->
+<div class="container">
+
+  <h1>💖 For You 💖</h1>
+
+  <p>
+    This is something small, but made with a lot of care.
+  </p>
+
+  <!-- 🎵 APPLE MUSIC LINK -->
+  <h2>🎵 Her Playlist</h2>
+
+  <p>Click below to open your playlist 💖</p>
+
+  <a href="https://music.apple.com/in/playlist/princess-playlist/pl.u-9N9L2a4t1kEMkgX"
+     target="_blank">
+     Open on Apple Music 🎧
+  </a>
+
 </div>
 
 <!-- 💖 FLOATING HEARTS -->
